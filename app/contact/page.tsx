@@ -1,56 +1,56 @@
-import Nav from "@/components/reusable/Nav";
-import {
-  MapPin,
-  Mail,
-  Phone,
-  MessageSquare,
-  Linkedin,
-  Twitter,
-  Instagram,
-} from "lucide-react";
+import { MapPin, Mail, Phone } from "lucide-react";
 
 const ContactPage = () => {
   const contactInfo = [
     {
-      icon: MapPin,
-      title: "Address",
-      details: "Jakarta, Indonesia",
-      subtitle: "Visit our studio",
-    },
-    {
       icon: Mail,
       title: "Email",
-      details: "hello@creativeagency.com",
+      details: "aagengineering@aess.in",
       subtitle: "24 hour response",
     },
     {
       icon: Phone,
       title: "Phone",
-      details: "+62 812-3456-7890",
+      details: "+91 934 675 1311",
+      subtitle: "Toll-free support",
+    },
+    {
+      icon: Phone,
+      title: "Phone",
+      details: "+91 40 3563 4458",
       subtitle: "Monday-Friday 9-6",
     },
     {
-      icon: MessageSquare,
-      title: "Chat",
-      details: "Live Chat Support",
-      subtitle: "Business hours",
+      icon: MapPin,
+      title: "Website",
+      details: "www.AESS.co.in",
+      subtitle: "Visit our site",
     },
   ];
 
-  const socialLinks = [
-    { platform: "Instagram", handle: "@creativeagency", icon: Instagram },
-    { platform: "LinkedIn", handle: "Creative Agency", icon: Linkedin },
-    { platform: "Twitter", handle: "@creative_co", icon: Twitter },
-  ];
-
   return (
-    <div>
-      <Nav />
+    <div className="pt-16">
+      <section className="py-32 px-6 md:px-12 lg:px-20 bg-linear-to-br from-[#fd5c01] to-[#cc4800] text-white relative overflow-hidden">
+        
+        <div className="absolute inset-0 opacity-10">
+          <svg className="w-full h-full" viewBox="0 0 1200 400">
+            <defs>
+              <pattern
+                id="dots"
+                width="30"
+                height="30"
+                patternUnits="userSpaceOnUse"
+              >
+                <circle cx="15" cy="15" r="2" fill="white" />
+              </pattern>
+            </defs>
+            <rect width="1200" height="400" fill="url(#dots)" />
+          </svg>
+        </div>
 
-      <section className="py-20 px-6 md:px-12 lg:px-20 bg-linear-to-br from-primary to-orange-600 text-white">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-black mb-6">Get In Touch</h1>
-          <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-90">
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <h1 className="text-4xl md:text-6xl font-black mb-4">Get In Touch</h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto opacity-95">
             Have a project? We'd love to hear from you. Let's create amazing
             solutions together.
           </p>
@@ -65,13 +65,13 @@ const ContactPage = () => {
               return (
                 <div
                   key={idx}
-                  className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg hover:border-primary transition-all text-center"
+                  className="bg-white p-8 rounded-xl border border-gray-200 hover:shadow-lg hover:border-[#fd5c01] transition-all text-center"
                 >
-                  <Icon className="w-10 h-10 text-primary mx-auto mb-4" />
+                  <Icon className="w-10 h-10 text-[#fd5c01] mx-auto mb-4" />
                   <h3 className="text-lg font-bold text-dark mb-2">
                     {info.title}
                   </h3>
-                  <p className="text-primary font-semibold mb-2">
+                  <p className="text-[#fd5c01] font-semibold mb-2">
                     {info.details}
                   </p>
                   <p className="text-gray-600 text-sm">{info.subtitle}</p>
@@ -97,7 +97,7 @@ const ContactPage = () => {
                   <input
                     type="text"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#fd5c01]"
                     placeholder="John Doe"
                   />
                 </div>
@@ -108,7 +108,7 @@ const ContactPage = () => {
                   <input
                     type="email"
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#fd5c01]"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -118,7 +118,7 @@ const ContactPage = () => {
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#fd5c01]"
                     placeholder="Your Company"
                   />
                 </div>
@@ -128,7 +128,7 @@ const ContactPage = () => {
                   </label>
                   <select
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#fd5c01]"
                   >
                     <option value="">Select a project type</option>
                     <option value="web">Web Design & Development</option>
@@ -144,13 +144,13 @@ const ContactPage = () => {
                   <textarea
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-[#fd5c01] resize-none"
                     placeholder="Tell us about your project..."
                   ></textarea>
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-primary text-white py-4 font-bold rounded-lg hover:bg-opacity-90"
+                  className="w-full bg-[#fd5c01] text-white py-4 font-bold rounded-lg hover:bg-[#e64c00]"
                 >
                   Send Message
                 </button>
@@ -191,32 +191,6 @@ const ContactPage = () => {
                     <span className="text-gray-600">Sunday</span>
                     <span className="font-semibold text-dark">Closed</span>
                   </div>
-                </div>
-              </div>
-
-              <div className="bg-white border border-gray-200 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-dark mb-6">Follow Us</h3>
-                <div className="space-y-3">
-                  {socialLinks.map((social, idx) => {
-                    const Icon = social.icon;
-                    return (
-                      <a
-                        key={idx}
-                        href="#"
-                        className="flex items-center gap-3 p-3 rounded-lg hover:shadow-md border border-gray-200 hover:border-gray-300 transition-all"
-                      >
-                        <Icon className="w-6 h-6 text-primary" />
-                        <div>
-                          <p className="font-semibold text-dark text-sm">
-                            {social.platform}
-                          </p>
-                          <p className="text-gray-600 text-xs">
-                            {social.handle}
-                          </p>
-                        </div>
-                      </a>
-                    );
-                  })}
                 </div>
               </div>
             </div>
@@ -264,30 +238,11 @@ const ContactPage = () => {
                   {faq.q}
                   <span className="transition group-open:rotate-180">▼</span>
                 </summary>
-                <div className="px-6 pb-6 text-gray-600 border-t border-gray-200">
+                <div className="px-6 pb-6 pt-4 text-gray-600 border-t border-gray-200">
                   {faq.a}
                 </div>
               </details>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-6 md:px-12 lg:px-20 bg-dark text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-black mb-6">
-            Ready to Start?
-          </h2>
-          <p className="text-lg text-gray-300 mb-8">
-            Let's collaborate and create digital solutions that drive growth
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-primary text-white px-10 py-4 font-bold rounded hover:bg-opacity-90">
-              Start Your Project
-            </button>
-            <button className="border-2 border-white text-white px-10 py-4 font-bold rounded hover:bg-white hover:text-dark">
-              Schedule a Call
-            </button>
           </div>
         </div>
       </section>

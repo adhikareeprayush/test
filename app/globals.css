@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #f77a40;
-  --dark: #2e2e2e;
+  --primary: #fd5c01;
+  --dark: #1a1a1a;
+  --accent: #fd5c01;
 }
 
 @theme inline {
@@ -14,8 +17,17 @@
 
   --color-primary: var(--primary);
   --color-dark: var(--dark);
+  --color-accent: var(--accent);
 }
 
 body {
   font-family: "Poppins", sans-serif;
+}
+
+.font-space-mono {
+  font-family: "Space Mono", monospace;
+}
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
 }

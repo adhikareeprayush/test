@@ -1,28 +1,24 @@
 import Hero from "@/components/Homepage/Hero";
-import Nav from "@/components/reusable/Nav";
 import Services from "@/components/Homepage/Services";
 import AboutUs from "@/components/Homepage/AboutUs";
-import FeaturedWork from "@/components/Homepage/FeaturedWork";
 import HowWeWork from "@/components/Homepage/HowWeWork";
-import Testimonials from "@/components/Homepage/Testimonials";
-import OurClients from "@/components/Homepage/OurClients";
+import ClientsMarquee from "@/components/Homepage/ClientsMarquee";
 import CallToAction from "@/components/Homepage/CallToAction";
+import CoreValues from "@/components/Homepage/CoreValues";
+import IntroductionSection from "@/components/Homepage/IntroductionSection";
 
 const page = () => {
   return (
-    <div className="relative">
-      <div className="relative w-full xl:h-screen">
+    <div className="w-full">
+      <div className="relative pt-16">
         <Hero />
-        <div className="absolute top-0 left-0 w-full z-50">
-          <Nav variant="light" />
-        </div>
       </div>
+      <IntroductionSection />
+      <CoreValues />
       <Services />
       <AboutUs />
-      <FeaturedWork />
       <HowWeWork />
-      <Testimonials />
-      <OurClients />
+      <ClientsMarquee />
       <CallToAction />
     </div>
   );

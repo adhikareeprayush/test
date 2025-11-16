@@ -41,7 +41,6 @@ const Testimonials = () => {
   return (
     <section className="py-20 px-6 md:px-12 lg:px-20 bg-white">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
         <div className="mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-black text-dark mb-4">
             What Our Clients Say
@@ -52,19 +51,17 @@ const Testimonials = () => {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-gray-50 p-8 border border-gray-200 rounded-lg hover:shadow-lg transition-all"
+              className="bg-gray-50 p-8 border border-gray-200 rounded-lg hover:shadow-lg transition-all flex flex-col h-full justify-between"
             >
-              {/* Stars */}
               <div className="flex items-center gap-1 mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <svg
                     key={i}
-                    className="w-5 h-5 fill-primary"
+                    className="w-5 h-5 fill-[#fd5c01]"
                     viewBox="0 0 20 20"
                   >
                     <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
@@ -81,14 +78,12 @@ const Testimonials = () => {
                 ))}
               </div>
 
-              {/* Quote */}
               <p className="text-gray-700 text-base leading-relaxed mb-6">
                 "{testimonial.content}"
               </p>
 
-              {/* Client Info */}
               <div className="flex items-center gap-4 pt-6 border-t border-gray-200">
-                <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm">
+                <div className="w-12 h-12 bg-[#fd5c01] text-white rounded-full flex items-center justify-center font-bold text-sm">
                   {testimonial.image}
                 </div>
                 <div>

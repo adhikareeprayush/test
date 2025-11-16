@@ -51,9 +51,9 @@ const Services = () => {
             return (
               <div
                 key={service.id}
-                className="group p-6 bg-gray-50 border border-gray-200 hover:border-primary hover:shadow-lg transition-all duration-300 rounded-lg"
+                className="group p-6 bg-gray-50 border border-gray-200 hover:border-[#fd5c01] hover:shadow-lg transition-all duration-300 rounded-lg"
               >
-                <ServiceIcon className="w-10 h-10 text-primary mb-6 group-hover:scale-110 transition-transform" />
+                <ServiceIcon className="w-10 h-10 text-[#fd5c01] mb-6 group-hover:scale-110 transition-transform" />
                 <h3 className="text-xl font-bold text-dark mb-3">
                   {service.title}
                 </h3>

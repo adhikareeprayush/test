@@ -71,9 +71,9 @@ const HowWeWork = () => {
             const StepIcon = step.icon;
             return (
               <div key={idx} className="relative">
-                <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 h-full hover:shadow-lg hover:border-primary transition-all">
-                  <StepIcon className="w-10 h-10 text-primary mb-4" />
-                  <div className="text-5xl font-black text-primary opacity-20 mb-3">
+                <div className="bg-gray-50 border border-gray-200 rounded-xl p-8 h-full hover:shadow-lg hover:border-[#fd5c01] transition-all">
+                  <StepIcon className="w-10 h-10 text-[#fd5c01] mb-4" />
+                  <div className="text-5xl font-black text-[#fd5c01] opacity-20 mb-3">
                     {step.number}
                   </div>
                   <h3 className="text-xl font-bold text-dark mb-3">
@@ -92,7 +92,7 @@ const HowWeWork = () => {
           <p className="text-gray-600 text-lg mb-6">
             Curious about how this works for your specific project?
           </p>
-          <button className="bg-primary text-white px-10 py-4 font-bold rounded-lg hover:bg-opacity-90 transition-all">
+          <button className="bg-[#fd5c01] text-white px-10 py-4 font-bold rounded-lg hover:bg-[#e64c00] transition-all">
             Let's Chat
           </button>
         </div>
