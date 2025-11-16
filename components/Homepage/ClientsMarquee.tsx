@@ -19,6 +19,7 @@ const ClientsMarquee = () => {
   return (
     <section className="py-20 px-6 md:px-12 lg:px-20 bg-white border-y border-gray-200">
       <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
         <div className="mb-12 text-center">
           <h2 className="text-3xl md:text-4xl font-black text-dark mb-3">
             Trusted by Leading Companies
@@ -29,6 +30,7 @@ const ClientsMarquee = () => {
           </p>
         </div>
 
+        {/* Marquee Container */}
         <div className="overflow-hidden">
           <style>{`
             @keyframes marquee {
@@ -42,7 +44,7 @@ const ClientsMarquee = () => {
             
             .marquee {
               display: flex;
-              animation: marquee 30s linear infinite;
+              animation: marquee 15s linear infinite;
             }
             
             .marquee:hover {
@@ -59,6 +61,7 @@ const ClientsMarquee = () => {
           `}</style>
 
           <div className="marquee">
+            {/* Original items */}
             {clients.map((client) => (
               <div key={`${client.id}-1`} className="marquee-item">
                 <div className="w-48 h-20 relative bg-gray-50 rounded-lg border border-gray-200 flex items-center justify-center p-4 hover:shadow-md transition-shadow">
@@ -72,6 +75,7 @@ const ClientsMarquee = () => {
               </div>
             ))}
 
+            {/* Duplicated items for seamless loop */}
             {clients.map((client) => (
               <div key={`${client.id}-2`} className="marquee-item">
                 <div className="w-48 h-20 relative bg-gray-50 rounded-lg border border-gray-200 flex items-center justify-center p-4 hover:shadow-md transition-shadow">
@@ -87,6 +91,7 @@ const ClientsMarquee = () => {
           </div>
         </div>
 
+        {/* CTA */}
         <div className="text-center mt-12">
           <p className="text-gray-600 text-base mb-4">
             Ready to join our growing family of successful clients?

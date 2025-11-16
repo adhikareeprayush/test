@@ -35,6 +35,7 @@ const Nav = ({ variant = "dark" }: NavProps) => {
         isLight ? "text-white bg-white/20" : "text-dark bg-white/80"
       }`}
     >
+      {/* Logo */}
       <Link href="/" className="shrink-0 flex items-center">
         <Image
           src="/logo.png"
@@ -45,6 +46,7 @@ const Nav = ({ variant = "dark" }: NavProps) => {
         />
       </Link>
 
+      {/* Desktop Navigation */}
       <div className="hidden xl:flex items-center gap-2">
         <div
           className={`flex items-center gap-1 text-sm md:text-base font-medium ${
@@ -74,6 +76,7 @@ const Nav = ({ variant = "dark" }: NavProps) => {
         </div>
       </div>
 
+      {/* Mobile Menu Button */}
       <button
         className="xl:hidden flex items-center"
         onClick={() => setIsOpen(!isOpen)}
@@ -85,6 +88,7 @@ const Nav = ({ variant = "dark" }: NavProps) => {
         )}
       </button>
 
+      {/* Mobile Navigation */}
       {isOpen && (
         <div
           className={`absolute top-16 left-0 right-0 ${
@@ -100,8 +104,8 @@ const Nav = ({ variant = "dark" }: NavProps) => {
                 className={`py-3 px-3 rounded-lg text-base font-medium transition-all ${
                   isActive(link.href)
                     ? isLight
-                      ? "text-white border-l-4 border-white bg-white/10"
-                      : "text-[#fd5c01] border-l-4 border-[#fd5c01] bg-orange-50"
+                      ? "text-white bg-white/10"
+                      : "text-[#fd5c01] bg-orange-50"
                     : isLight
                     ? "text-white hover:text-gray-200"
                     : "text-dark hover:text-[#fd5c01]"
